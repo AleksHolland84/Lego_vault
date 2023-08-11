@@ -19,6 +19,11 @@ Activate it with
 `.venv\Scripts\activate`
 
 ### Installing the dependencies
+With the virtual environment activated, install the dependencies
+`pip install flask
+pip install buildhat`
+
+Example on the Raspberry pi:
 `(venv)pi@raspberrypi:~/LEGO $ pip install flask, buildhat`
 
 The project contains an app.py file, which is the Lego Vault server. Run it with the following command:
