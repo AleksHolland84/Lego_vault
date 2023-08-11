@@ -15,10 +15,10 @@ Use the venv module to create a virtual environment
 Activate it with
 #### Linux
 `. ./.venv/bin/activate`
-### Windows
+#### Windows
 `.venv\Scripts\activate`
 
-## Installing the dependencies
+### Installing the dependencies
 `(venv)pi@raspberrypi:~/LEGO $ pip install flask, buildhat`
 
 The project contains an app.py file, which is the Lego Vault server. Run it with the following command:
