@@ -19,7 +19,8 @@ Activate it with
 `.venv\Scripts\activate`
 
 ## Installing the dependencies
-The project contails an app.py file, which is the Lego Vault server. Run it with the following command:
 `(venv)pi@raspberrypi:~/LEGO $ pip install flask, buildhat`
+
+The project contains an app.py file, which is the Lego Vault server. Run it with the following command:
 
 `flask run --host=0.0.0.0`
