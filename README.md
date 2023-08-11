@@ -9,14 +9,14 @@ The project also makes use of the [Raspberry Pi Build Hat](https://www.raspberry
   <img src="images/build-hat.jpg" alt="Picture" width="400" style="margin: 0 auto" /></img>
 </p>
 
+
+# Setting up the Bank Vault
 ## Creating virtual encironment
 Use the venv module to create a virtual environment
 `python3 -m venv .venv`
-Activate it with
-#### Linux
+
+#### Linux (Raspberry Pi OS)
 `. ./.venv/bin/activate`
-#### Windows
-`.venv\Scripts\activate`
 
 ### Installing the dependencies
 With the virtual environment activated, install the dependencies
@@ -36,4 +36,52 @@ The project contains an app.py file, which is the Lego Vault server. Run it with
 
 ```
 flask run --host=0.0.0.0
+```
+
+
+# Setting up the Clients Brute Forcing script
+## Linux
+
+### Creating virtual encironment
+Use the venv module to create a virtual environment
+
+```
+python3 -m venv .venv
+
+. ./.venv/bin/activate
+```
+
+##### Installing the dependencies
+With the virtual environment activated, install the dependencies
+
+```
+pip install requests
+```
+
+##### Running the script
+```
+python3 brute_force.py <Bank Vault IP> <port>
+```
+
+## Windows
+
+### Creating virtual encironment
+Use the venv module to create a virtual environment
+
+```
+py -m venv .venv
+
+.venv\Scripts\activate
+```
+
+##### Installing the dependencies
+With the virtual environment activated, install the dependencies
+
+```
+pip install requests
+```
+
+##### Running the script
+```
+py brute_force.py <Bank Vault IP> <port>
 ```
