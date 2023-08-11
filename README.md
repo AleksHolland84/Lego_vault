@@ -54,6 +54,9 @@ Now that the Bank Vault Server is running, you can open a browser window on a co
 
 [![Watch the video](https://img.youtube.com/vi/GaOmDu-yShU/maxresdefault.jpg)](https://youtu.be/GaOmDu-yShU)
 
+<p align="center">
+  <img src="images/keypad.png" alt="Picture" width="400" style="margin: 0 auto" /></img>
+</p>
 
 # Setting up the Clients Brute Forcing script
 ## Linux
