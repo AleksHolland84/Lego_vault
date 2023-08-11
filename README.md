@@ -52,7 +52,7 @@ flask run --host=0.0.0.0
 
 Now that the Bank Vault Server is running, you can open a browser window on a computer connected to the same network as the Raspberry Pi, go to the ipaddress for the Pi and the correct port (5000). Eg. `http://10.80.211.100:5000` or `http://192.168.0.100:5000`. You should be presentated with a keypad. Press the 4 numbers and then # to send the pin code. If the correct pin code is pressed, it should print "ACCESS" and open the lock on the vault. 
 
-[![Watch the video](https://img.youtube.com/vi/GaOmDu-yShU/maxresdefault.jpg)](https://youtu.be/GaOmDu-yShU){:target="_blank"}  
+[![Watch the video](https://img.youtube.com/vi/GaOmDu-yShU/maxresdefault.jpg)](https://youtu.be/GaOmDu-yShU)
 
 
 # Setting up the Clients Brute Forcing script
