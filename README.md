@@ -21,9 +21,11 @@ Activate it with
 ### Installing the dependencies
 With the virtual environment activated, install the dependencies
 
-```pip install flask
+'''
+pip install flask
 
-pip install buildhat```
+pip install buildhat
+'''
 
 Example on the Raspberry pi:
 
