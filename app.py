@@ -12,16 +12,20 @@ logging.basicConfig(
     level=logging.ERROR
 )
 
-# Getting variables from .env file. This is the pin number we need to type to get access.
+# Getting variables from .env file
 load_dotenv()
 PIN = os.getenv('pin')
 
 # Setting up LEGO
-legoMotor = Motor('A')
-
 def handle_motor(speed, pos, apos):
     print("Motor", speed, pos, apos)
 
+legoMotor = Motor('C')
+legoMotor.when_rotated = handle_motor
+legoMotor.run_to_position(-90, blocking=False, direction='anticlockwise')
+
+
+#### FLASK APP TO SERVE WEB APP INTERFACE ####
 app = Flask(__name__)
 
 @app.route('/')
@@ -35,9 +39,7 @@ def process():
     print("Pincode:", pincode)
     if pincode == PIN:
         result = "ACCESS"
-        legoMotor.when_rotated = handle_motor
-        legoMotor.set_default_speed(50)
-        legoMotor.run_for_degrees(90)
+        legoMotor.run_for_seconds(1)
     else:
         result = "DENIED"
 
