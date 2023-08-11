@@ -12,13 +12,18 @@ The project also makes use of the [Raspberry Pi Build Hat](https://www.raspberry
 
 # Setting up the Bank Vault
 ## Creating virtual encironment
+### Linux (Raspberry Pi OS)
 Use the venv module to create a virtual environment
-`python3 -m venv .venv`
-
-#### Linux (Raspberry Pi OS)
+```
+python3 -m venv .venv
+```
+Then, activate the environment:
+```
+. ./.venv/bin/activate
+```
 `. ./.venv/bin/activate`
 
-### Installing the dependencies
+#### Installing the dependencies
 With the virtual environment activated, install the dependencies
 
 ```
@@ -26,12 +31,13 @@ pip install flask
 pip install buildhat
 ```
 
-Example on the Raspberry pi:
+Example on the Raspberry Pi:
 
 ```
 (venv)pi@raspberrypi:~/LEGO $ pip install flask, buildhat
 ```
-Before we can run the server, we need to create (or download) a ```.env``` file. This file contains our pin number.
+
+Before we can run the server, we need to create (or download) a ```.env``` file. This file contains our pin number and should be formatted like so; `pin='1234'`.
 The project contains an app.py file, which is the Lego Vault server. Run it with the following command:
 
 ```
