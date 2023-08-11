@@ -9,8 +9,17 @@ The project also makes use of the [Raspberry Pi Build Hat](https://www.raspberry
   <img src="images/build-hat.jpg" alt="Picture" width="400" style="margin: 0 auto" /></img>
 </p>
 
-Testing stuff
-![Raspberry Pi Build Hat](images/build-hat.jpg "Build Hat")
+## Creating virtual encironment
+Use the venv module to create a virtual environment
+`python3 -m venv .venv`
+Activate it with
+#### Linux
+`. ./.venv/bin/activate`
+### Windows
+`.venv\Scripts\activate`
 
+## Installing the dependencies
+The project contails an app.py file, which is the Lego Vault server. Run it with the following command:
+`(venv)pi@raspberrypi:~/LEGO $ pip install flask, buildhat`
 
-
+`flask run --host=0.0.0.0`
