@@ -6,5 +6,6 @@ This project builds on the Lego Spike lesson: [Keep It Safe](https://education.l
 
 The project also makes use of the [Raspberry Pi Build Hat](https://www.raspberrypi.com/products/build-hat/).
 <p align="center">
+  <img src="images/build-hat.jpg">
 ![Raspberry Pi Build Hat](images/build-hat.jpg "Build Hat")
 </p>
