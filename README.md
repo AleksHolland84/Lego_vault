@@ -27,7 +27,7 @@ pip install buildhat`
 
 Example on the Raspberry pi:
 
-`(venv)pi@raspberrypi:~/LEGO $ pip install flask, buildhat`
+```(venv)pi@raspberrypi:~/LEGO $ pip install flask, buildhat```
 
 The project contains an app.py file, which is the Lego Vault server. Run it with the following command:
 
