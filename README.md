@@ -30,8 +30,8 @@ Example on the Raspberry pi:
 
 ```
 (venv)pi@raspberrypi:~/LEGO $ pip install flask, buildhat
-``` 
-
+```
+Before we can run the server, we need to create (or download) a ```.env``` file. This file contains our pin number.
 The project contains an app.py file, which is the Lego Vault server. Run it with the following command:
 
 ```
