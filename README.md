@@ -27,7 +27,7 @@ Then, activate the environment:
 ```
 . ./.venv/bin/activate
 ```
-`. ./.venv/bin/activate`
+
 
 #### Installing the dependencies
 With the virtual environment activated, install the dependencies
@@ -44,11 +44,16 @@ Example on the Raspberry Pi:
 ```
 
 Before we can run the server, we need to create (or download) a ```.env``` file. This file contains our pin number and should be formatted like so; `pin='1234'`.
-The project contains an app.py file, which is the Lego Vault server. Run it with the following command:
+The project contains an app.py file, which is the Lego Vault server. Run it with the following command[^1]:
 
 ```
+flaks --app app run --host=0.0.0.0
 flask run --host=0.0.0.0
 ```
+[^1]: If debug is set to True it returns some errors with the LEGO Buildhat serinterface.py. 
+  So you need to run the script without debug off!
+
+
 
 Now that the Bank Vault Server is running, you can open a browser window on a computer connected to the same network as the Raspberry Pi, go to the ipaddress for the Pi and the correct port (5000). Eg. `http://10.80.211.100:5000` or `http://192.168.0.100:5000`. You should be presentated with a keypad. Press the 4 numbers and then # to send the pin code. If the correct pin code is pressed, it should print "ACCESS" and open the lock on the vault. 
 
