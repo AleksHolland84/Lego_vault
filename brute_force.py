@@ -11,7 +11,7 @@ try:
 except IndexError:
     raise SystemExit(f"Usage: {sys.argv[0]} <bank_vault_IP> <PORT>")
 
-for i in range(0,10000):
+for i in range(1,10000): # 0000 locks the vault
     pin = str(i).zfill(4)
     print(f"Trying with pin: {pin}")
 
