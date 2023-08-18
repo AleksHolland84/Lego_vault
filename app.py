@@ -17,12 +17,13 @@ load_dotenv()
 PIN = os.getenv('pin')
 
 # Setting up LEGO
+legoMotor = Motor('C')
+legoMotor.set_default_speed(50)
+legoMotor.when_rotated = handle_motor
+
 def handle_motor(speed, pos, apos):
     print("Motor", speed, pos, apos)
 
-legoMotor = Motor('C')
-legoMotor.when_rotated = handle_motor
-legoMotor.run_to_position(-90, blocking=False, direction='anticlockwise')
 
 
 #### FLASK APP TO SERVE WEB APP INTERFACE ####
@@ -39,7 +40,12 @@ def process():
     print("Pincode:", pincode)
     if pincode == PIN:
         result = "ACCESS"
-        legoMotor.run_for_seconds(1)
+        legoMotor.run_for_seconds(1, 50)
+    elif pincode == "0000":
+        result = "LOCKED"
+        #legoMotor.run_for_seconds(1,-50)
+        legoMotor.run_to_position(-90, blocking=False, direction='anticlockwise')
+        print("Vault Locked")
     else:
         result = "DENIED"
 
