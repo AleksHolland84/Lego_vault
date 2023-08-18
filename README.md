@@ -109,3 +109,30 @@ pip install requests
 ```
 py brute_force.py <Bank Vault IP> <port>
 ```
+
+
+
+# Alternative
+
+An alternative way to run the Bank is by using the bank_app. This is an app that uses sockets to send and receive data from a client.
+### Run the Bang App Server
+```
+python3 bank_app.py
+```
+
+### Run the bank_client.py
+We can use the bank_client.py to brute force the bank
+```
+python3 bank_client.py
+```
+
+We can also use Netcat to send data:
+```
+nc <IP> <PORT>
+
+pi@raspberry:~ nc 10.80.211.100 8000
+3333
+Access denied!
+4444
+Access Granted
+```
