@@ -1,4 +1,4 @@
-#!/user/bin python3
+#!/usr/bin/env python3
 
 # Disclaimer: This script is for educational purposes only.  
 # Do not use against any server that you don't own or have authorization to test. 
