@@ -2,15 +2,15 @@
 This project builds on the Lego Spike lesson: [Keep It Safe](https://education.lego.com/en-au/lessons/prime-kickstart-a-business/keep-it-safe/). 
 
 ## Needed parts
-- [LEGO® Education SPIKE™ Prime-sæt](https://www.lego.com/en-dk/product/lego-education-spike-prime-set-45678){:target="_blank"}
-- [Powersupply for Raspberry Pi Build Hat](https://raspberrypi.dk/produkt/officiel-raspberry-pi-build-hat-stroemforsyning-8v-6a-eu/){:target="_blank"}
-- [Raspberry Pi Build HAT for use with LEGO®](https://raspberrypi.dk/en/product/raspberry-pi-build-hat/){:target="_blank"}
-- [Raspberry Pi 4 Model B](https://raspberrypi.dk/produkt/raspberry-pi-4-model-b-2-gb/){:target="_blank"}
+- [LEGO® Education SPIKE™ Prime-sæt](https://www.lego.com/en-dk/product/lego-education-spike-prime-set-45678)
+- [Powersupply for Raspberry Pi Build Hat](https://raspberrypi.dk/produkt/officiel-raspberry-pi-build-hat-stroemforsyning-8v-6a-eu/)
+- [Raspberry Pi Build HAT for use with LEGO®](https://raspberrypi.dk/en/product/raspberry-pi-build-hat/)
+- [Raspberry Pi 4 Model B](https://raspberrypi.dk/produkt/raspberry-pi-4-model-b-2-gb/)
 
 ![Image of lesson 7 from Lego Education](images/Lesson_7.png "Lego Education's lesson 7")
 
 
-The project also makes use of the [Raspberry Pi Build Hat](https://www.raspberrypi.com/products/build-hat){:target="_blank"}.
+The project also makes use of the [Raspberry Pi Build Hat](https://www.raspberrypi.com/products/build-hat/).
 <p align="center">
   <img src="images/build-hat.jpg" alt="Picture" width="400" style="margin: 0 auto" /></img>
 </p>
