@@ -110,7 +110,7 @@ pip install requests
 py brute_force.py <Bank Vault IP> <port>
 ```
 
-##### Creating a Systemd Service
+### Creating a Systemd Service
 Create a service by creating a file at /etc/systemd/system
 ```
 sudo nano /etc/systemd/system/lego_vault.service
