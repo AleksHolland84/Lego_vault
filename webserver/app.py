@@ -51,7 +51,7 @@ def process():
 
         #Use the https://notify.sh application to notify you when someone finds the four-digit code.
         ntfy_data = f"{request.remote_addr} has opened the vault!"
-        #ntfy_responce = requests.post(ntfy_url + ntfy_topic , data=ntfy_data)
+        #ntfy_response = requests.post(ntfy_url + ntfy_topic , data=ntfy_data)
                                       
     elif pincode == "0000":
         result = "LOCKED"
