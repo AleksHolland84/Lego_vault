@@ -5,6 +5,7 @@ import logging
 from dotenv import load_dotenv
 import os
 from buildhat import Motor
+import requests
 
 
 logging.basicConfig(
