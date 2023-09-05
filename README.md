@@ -100,7 +100,7 @@ sudo systemctl enable lego_vault.service
 ## Install ufw firewall and block ip
 If you want, you can install UFW on the Raspberry Pi and block a user who has oppened the vault. 
 This requires that you have the IP from the user. You can get that by creating an account on https://ntfy.sh and listen to a topic. 
-Then uncomment the ntfy_topic, ntfy_url and ntfy_responce = requests.post(ntfy_url, data=ntfy_data) lines in the app.py script. 
+Then uncomment the ntfy_topic, ntfy_url and ntfy_response = requests.post(ntfy_url + ntfy_topic, data=ntfy_data) lines in the app.py script. 
 
 Install the ntfy app on your phone or use the web app. 
 You will be notified when a user has opned the vault and get their IP address.
