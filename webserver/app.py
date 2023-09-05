@@ -16,6 +16,11 @@ logging.basicConfig(
 load_dotenv()
 PIN = os.getenv('pin')
 
+# Ntfy.sh
+#ntfy_topic: str = "<INSERT NTFY TOPIC>"
+#ntfy_url: str = f"https://ntfy.sh/{ntfy_topic}"
+
+
 # Setting up LEGO
 legoMotor = Motor('C')
 legoMotor.set_default_speed(50)
@@ -41,6 +46,11 @@ def process():
     if pincode == PIN:
         result = "ACCESS"
         legoMotor.run_for_seconds(1, 50)
+
+        #Use the https://notify.sh application to notify you when someone finds the four-digit code.
+        ntfy_data = f"{request.remote_addr} has opened the vault!"
+        #ntfy_responce = requests.post(ntfy_url, data=ntfy_data)
+                                      
     elif pincode == "0000":
         result = "LOCKED"
         #legoMotor.run_for_seconds(1,-50)
