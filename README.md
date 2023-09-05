@@ -116,6 +116,7 @@ sudo ufw insert 1 deny from <IP ADDRESS>
 
 
 # Setting up the Clients Brute Forcing script
+This part is mostly for Script Kiddies. If you don't want to try creating the script your selves, you can download a brute-force script from my github for the Lego Vault Web Application. Below is a description on how to setup a virtual environment and install the required module for the script.
 ## Linux
 
 ### Creating virtual environment
