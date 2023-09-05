@@ -35,6 +35,7 @@ With the virtual environment activated, install the dependencies
 ```
 pip install flask
 pip install buildhat
+pip install requests
 ```
 
 Example on the Raspberry Pi:
@@ -96,7 +97,22 @@ Or enable it - making it start automaticaly when the Pi boots.
 sudo systemctl enable lego_vault.service
 ```
 
+## Install ufw firewall and block ip
+If you want, you can install UFW on the Raspberry Pi and block a user who has oppened the vault. 
+This requires that you have the IP from the user. You can get that by creating an account on https://ntfy.sh and listen to a topic. 
+Then uncomment the ntfy_topic, ntfy_url and ntfy_responce = requests.post(ntfy_url, data=ntfy_data) lines in the app.py script. 
 
+Install the ntfy app on your phone or use the web app. 
+You will be notified when a user has oppned the vault and get their IP address.
+
+### Install UFW
+```
+sudo apt install ufw
+```
+Then block the ip
+```
+sudo ufw insert 1 deny from <IP ADDRESS>
+```
 
 
 # Setting up the Clients Brute Forcing script
