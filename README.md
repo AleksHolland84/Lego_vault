@@ -41,7 +41,7 @@ pip install requests
 Example on the Raspberry Pi:
 
 ```
-(venv)pi@raspberrypi:~/LEGO $ pip install flask, buildhat
+(venv)pi@raspberrypi:~/LEGO $ pip install flask, buildhat, requests
 ```
 
 Before we can run the server, we need to create (or download) a ```.env``` file. This file contains our pin number and should be formatted like so; `pin='1234'`.
