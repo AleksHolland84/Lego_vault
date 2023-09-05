@@ -103,7 +103,7 @@ This requires that you have the IP from the user. You can get that by creating a
 Then uncomment the ntfy_topic, ntfy_url and ntfy_responce = requests.post(ntfy_url, data=ntfy_data) lines in the app.py script. 
 
 Install the ntfy app on your phone or use the web app. 
-You will be notified when a user has oppned the vault and get their IP address.
+You will be notified when a user has opned the vault and get their IP address.
 
 ### Install UFW
 ```
