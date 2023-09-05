@@ -21,11 +21,11 @@ The project also makes use of the [Raspberry Pi Build Hat](https://www.raspberry
 ### Linux (Raspberry Pi OS)
 Use the venv module to create a virtual environment
 ```
-python3 -m venv .venv
+python3 -m venv venv
 ```
 Then, activate the environment:
 ```
-. ./.venv/bin/activate
+. ./venv/bin/activate
 ```
 
 
@@ -118,13 +118,13 @@ sudo ufw insert 1 deny from <IP ADDRESS>
 # Setting up the Clients Brute Forcing script
 ## Linux
 
-### Creating virtual encironment
-Use the venv module to create a virtual environment
+### Creating virtual environment
+Use the venv module to create a virtual environment and activate it with the source command (or just use .)
 
 ```
-python3 -m venv .venv
+python3 -m venv venv
 
-. ./.venv/bin/activate
+. ./venv/bin/activate
 ```
 
 ##### Installing the dependencies
@@ -145,9 +145,9 @@ python3 brute_force.py <Bank Vault IP> <port>
 Use the venv module to create a virtual environment
 
 ```
-py -m venv .venv
+py -m venv venv
 
-.venv\Scripts\activate
+venv\Scripts\activate
 ```
 
 ##### Installing the dependencies
