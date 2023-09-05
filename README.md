@@ -63,6 +63,42 @@ Now that the Bank Vault Server is running, you can open a browser window on a co
   <img src="images/keypad.png" alt="Picture" width="400" style="margin: 0 auto" /></img>
 </p>
 
+### Creating a Systemd Service
+The script will close, even if detached from the terminal, when the user logs out or closes the ssh connection. We can create a systemd service for the lego_vault script that will start every time we boot the Pi.
+
+Create a service by creating a file at /etc/systemd/system
+```
+sudo nano /etc/systemd/system/lego_vault.service
+```
+Let the file contain the following
+
+```
+[Unit]
+Description=uWSGI instance to server LEGO Vault Project
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/LEGO/
+Environment="PATH=/home/pi/LEGO/venv/bin"
+ExecStart=/home/pi/LEGO/venv/bin/python3 /home/pi/LEGO/app.py
+
+[Install]
+WantedBy=multi-user.target
+```
+Activate the service with:
+```
+sudo systmectl start lego_vault.service
+```
+Or enable it - making it start automaticaly when the Pi boots.
+```
+sudo systemctl enable lego_vault.service
+```
+
+
+
+
 # Setting up the Clients Brute Forcing script
 ## Linux
 
@@ -109,34 +145,6 @@ pip install requests
 ```
 py brute_force.py <Bank Vault IP> <port>
 ```
-
-### Creating a Systemd Service
-Create a service by creating a file at /etc/systemd/system
-```
-sudo nano /etc/systemd/system/lego_vault.service
-```
-Let the file contain the following
-
-```
-[Unit]
-Description=uWSGI instance to server LEGO Vault Project
-After=network.target
-
-[Service]
-Type=simple
-User=pi
-WorkingDirectory=/home/pi/LEGO/
-Environment="PATH=/home/pi/LEGO/venv/bin"
-ExecStart=/home/pi/LEGO/venv/bin/python3 /home/pi/LEGO/app.py
-
-[Install]
-WantedBy=multi-user.target
-```
-Activate the service with:
-```
-sudo systmectl start lego_vault.service
-```
-
 
 
 # Alternative
