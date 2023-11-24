@@ -36,12 +36,13 @@ With the virtual environment activated, install the dependencies
 pip install flask
 pip install buildhat
 pip install requests
+pip install python-dotenv
 ```
 
 Example on the Raspberry Pi:
 
 ```
-(venv)pi@raspberrypi:~/LEGO $ pip install flask, buildhat, requests
+(venv)pi@raspberrypi:~/LEGO $ pip install flask buildhat requests python-dotenv
 ```
 
 Before we can run the server, we need to create (or download) a ```.env``` file. This file contains our pin number and should be formatted like so; `pin='1234'`.
