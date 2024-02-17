@@ -90,7 +90,7 @@ def script_kitty():
     print("_________________________________________________________")
 
 if __name__ == "__main__":
-    the_litty = input("Did you download the script? (n/y): ")
-    if the_kitty != "y":
+    the_kitty = input("Did you download the script? (n/y): ")
+    if the_kitty != "n":
         script_kitty()
     asyncio.run(main())
