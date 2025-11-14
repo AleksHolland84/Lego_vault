@@ -7,7 +7,8 @@ import requests #importerer requests modulet
 #---------------------------------------------------------#
 #                        VARIABLER                        #
 #---------------------------------------------------------#
-url = "http://192.168.0.79:5000/process" # URL'ens opbygning: Protocol (http://),  IP/DOMÆNENAVN (192.168.0.79), Port (:5000) og Sti (/process)
+# URL'ens opbygning: Protocol (http://),  IP/DOMÆNENAVN (192.168.0.79), Port (:5000) og Sti (/process)
+url = "http://192.168.0.79:5000/process"
 pin = "0001" # Vi sætter vores pinkode til "0001"
 payload = {"pincode": pin} # data der skal sendes der 
 
